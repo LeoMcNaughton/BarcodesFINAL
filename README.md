@@ -11,7 +11,7 @@ The goal of this project is to simplify the creation and sorting of barcodes and
 
 This module will build a random ISBN.  The first 9 numbers signify information related to the book itself: publisher, author, title, etc.  The last digit however is a error checking digit to make sure the 9 digits were properly read by a machine.
 
-Background Information [ISBN-10 link](https://isbn-information.com/the-10-digit-isbn.html)
+    Background Information [ISBN-10 link](https://isbn-information.com/the-10-digit-isbn.html)
 
 #### Public Instance Variable
   -  **code**:  Import and utilize the Random() module to create the 9 digit unique ISBN.  Make sure it is stored as a String and not a number type.

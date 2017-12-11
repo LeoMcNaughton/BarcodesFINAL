@@ -1,5 +1,5 @@
 const Random = function(){
- 
+  
     function continuousRange(a,b){
         return (b-a)*Math.random()+a;
     }

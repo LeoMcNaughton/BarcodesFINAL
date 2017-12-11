@@ -21,6 +21,8 @@ const ISBN = function(){
     }
     function read(){
         //create this function
+        return code+"-"+checkDigit;
+
     }
 
     return {code, checkDigit, read};
