@@ -17,28 +17,28 @@ const EAN = function(){
 
        function makeSysCode(){
            let r = Random().discreteRangeIn(1,8);
-           if r == 1{
+           if(r==1){
            return 471;
        }
-       if r == 2{
+       if(r==2){
            return 479;
        }
-       if r == 3{
+       if(r==3){
            return 484;
        }
-       if r == 4{
+       if(r==4){
            return 539;
        }
-       if r == 5{
+       if(r==5){
            return 70;
        }
-       if r == 6{
+       if(r==6){
            return 539;
        }
-       if r == 7{
+       if(r==7){
            return 45;
        }
-       if r == 8{
+       if(r==8){
            return 599;
        }
        }
@@ -66,7 +66,7 @@ const EAN = function(){
 
     function read(){
         //create this function
-     return sysCode+manCode+"-"checkDigit;
+     return sysCode+manCode+"-"+checkDigit;
     }
     return {sysCode,manCode,proCode,checkDigit,read};
 };
