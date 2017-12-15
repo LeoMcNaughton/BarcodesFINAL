@@ -21,8 +21,7 @@ const ISBN = function(){
     }
     function read(){
         //create this function
-        return code+"-"+checkDigit;
-
+        return code+"-"+checkDigit
     }
 
     return {code, checkDigit, read};
@@ -34,5 +33,6 @@ function test(){
     console.log(b.checkDigit);
     console.log(b.read());
 }
+
 //test();
 module.exports = ISBN;
