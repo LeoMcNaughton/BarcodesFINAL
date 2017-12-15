@@ -12,7 +12,7 @@ const EAN = function(){
 
     function makeSysCode(){
         //create this function
-        const r= Random().discreteRangeIn(1,8);
+        let r= Random().discreteRangeIn(1,8);
         if(r==1){
             return "750"
         }
@@ -41,9 +41,9 @@ const EAN = function(){
 
     function check(){
         //create this function
-        const code = sysCode+manCode+proCode;
+        let code = sysCode+manCode+proCode;
 
-        const sum = 0;
+        let sum = 0;
         for(let c=0;c<12;c++){
             if(c%2 ==0){
                 sum += 1*code[c];
@@ -53,7 +53,7 @@ const EAN = function(){
             }
         }
     //    console.log("the sum is ="+sum);
-        const remainder = sum %10;
+        let remainder = sum %10;
         if(remainder == 0){
             return 0;
         }
@@ -69,7 +69,7 @@ const EAN = function(){
 };
 
 function test(){
-    const e = new EAN();
+    let e = new EAN();
     console.log(e.code);
 
 }
