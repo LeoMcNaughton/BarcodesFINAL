@@ -2,8 +2,8 @@ const Random = require('./Random.js');
 
 const ISBN = function(){
 
-    let code = Random().digit(9);
-    let checkDigit = check();
+    const code = Random().digit(9);
+    const checkDigit = check();
 
     function check(){
         let sum = 0;
@@ -28,11 +28,11 @@ const ISBN = function(){
 };
 
 function test(){
-    let b = new ISBN();
+    const b = new ISBN();
     console.log(b.code);
     console.log(b.checkDigit);
     console.log(b.read());
 }
 
-//test();
+test();
 module.exports = ISBN;

@@ -2,17 +2,17 @@ const Random = require('./Random.js');
 
 const EAN = function(){
 
-    let sysCode= makeSysCode();//3 digits
-    let manCode = String(Random().digit(5));//5 digits
-    let proCode= String(Random().digit(4));//4 digits
-    let checkDigit = check();
-    let code = sysCode+manCode+proCode;
+    const sysCode= makeSysCode();//3 digits
+    const manCode = String(Random().digit(5));//5 digits
+    const proCode= String(Random().digit(4));//4 digits
+    const checkDigit = check();
+    const code = sysCode+manCode+proCode;
 
 
 
     function makeSysCode(){
         //create this function
-        let r= Random().discreteRangeIn(1,8);
+        const r= Random().discreteRangeIn(1,8);
         if(r==1){
             return "750"
         }
@@ -41,9 +41,9 @@ const EAN = function(){
 
     function check(){
         //create this function
-        let code = sysCode+manCode+proCode;
+        const code = sysCode+manCode+proCode;
 
-        let sum = 0;
+        const sum = 0;
         for(let c=0;c<12;c++){
             if(c%2 ==0){
                 sum += 1*code[c];
@@ -53,7 +53,7 @@ const EAN = function(){
             }
         }
     //    console.log("the sum is ="+sum);
-        let remainder = sum %10;
+        const remainder = sum %10;
         if(remainder == 0){
             return 0;
         }
@@ -69,10 +69,10 @@ const EAN = function(){
 };
 
 function test(){
-    let e = new EAN();
+    const e = new EAN();
     console.log(e.code);
 
 }
 
-//test();
+test();
 module.exports = EAN;

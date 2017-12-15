@@ -16,8 +16,9 @@ const BookFactory = function (){
     return {createBook};
 }
 function test(){
-    let e = new BookFactory();
+    const e = new BookFactory();
     console.log(e.createBook(2006));
 
 }
+test()
 module.exports = BookFactory;
