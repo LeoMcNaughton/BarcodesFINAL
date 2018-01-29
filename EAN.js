@@ -71,6 +71,11 @@ const EAN = function(){
 function test(){
     let e = new EAN();
     console.log(e.code);
+    
+function fag(){
+    let l=Leo;
+    bbc = big black cock;
+    l = fag*BBC;
 
 }
 
